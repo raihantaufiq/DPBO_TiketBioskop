@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedial DPBO</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- form Tambah Tiket Bioskop Antrian -->
+        <h3>Tambah Tiket Bioskop Antrian</h3>
+        <form action="index.php" method="post">
+            <div class="d-flex my-3">
+                <label for="tjudulfilm" class="col-2">Judul Film</label>
+                <div class="mx-1">
+                  <input required type="text" class="form-control" name="tjudulfilm">
+                </div>
+            </div>
+            <div class="d-flex my-3">
+                <label for="twaktu" class="col-2">Waktu</label>
+                <div class="mx-1">
+                  <input required type="datetime-local" class="form-control" name="twaktu">
+                </div>
+            </div>
+            <div class="d-flex my-3">
+                <label for="tnamapemesan" class="col-2">Nama Pemesan</label>
+                <div class="mx-1">
+                  <input required type="text" class="form-control" name="tnamapemesan">
+                </div>
+            </div>
+
+            <input type="submit" name="antrian" value="Simpan Tiket" class="btn btn-primary col-4">
+        </form>
+
+        <hr class="my-3"/>
+
+        <!-- form Tambah Bioskop -->
+        <h3>Tambah Bioskop</h3>
+        <form action="index.php" method="post">
+            <div class="d-flex my-3">
+                <label for="namabioskop" class="col-2">Nama Bioskop</label>
+                <div class="mx-1">
+                  <input required type="text" class="form-control" name="tnamabioskop">
+                </div>
+            </div>
+            <div class="d-flex my-3">
+                <label for="kota" class="col-2">Kota</label>
+                <div class="mx-1">
+                  <input required type="text" class="form-control" name="tkota">
+                </div>
+            </div>
+
+            <input type="submit" name="bioskop" value="Simpan" class="btn btn-primary col-4">
+        </form>
+
+        <hr class="my-3"/>
+
+        <!-- tabel Tiket Antrian  -->
+        <table class="table-bordered w-100 my-3" style="text-align: center;">
+            <p class="mt-5">Tiket Antrian (ttiketbioskopantrian)</p>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Id Tiket</th>
+                <th scope="col">Judul Film</th>
+                <th scope="col">Waktu</th>
+                <th scope="col">Nama Pemesan</th>
+                <th scope="col">Pilih Bioskop</th>
+                <th scope="col">Aksi</th>
+              </tr>
+            </thead>
+            <tr>
+              DATA_TABEL_B
+            </tr>
+        </table>
+
+        <!-- tabel Tiket Bioskop Valid  -->
+        <table class="table-bordered w-100 my-3" style="text-align: center;">
+            <p class="mt-5">Tiket Bioskop Valid (ttiketbioskop)</p>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Id Tiket</th>
+                <th scope="col">Judul Film</th>
+                <th scope="col">Waktu</th>
+                <th scope="col">Nama Pemesan</th>
+                <th scope="col">Bioskop</th>
+              </tr>
+            </thead>
+            <tr>
+              DATA_TABEL_A
+            </tr>
+        </table>
+
+    </div>
+
+    
+</body>
+</html>
